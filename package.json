@@ -1,6 +1,6 @@
 {
   "name": "electron-auto-update-example",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "main.js",
   "repository": {
@@ -10,8 +10,8 @@
   "scripts": {
     "start": "electron .",
     "start1": "electron --inspect=9229 --remote-debugging-port=9222 .",
-    "build": "electron-builder build --mac --win --publish never",
-    "deploy": "electron-builder build --mac --win --publish always"
+    "build": "electron-builder build --mac --linux --win --publish never",
+    "deploy": "electron-builder build --mac --linux --win --publish always"
   },
   "author": "",
   "license": "ISC",
