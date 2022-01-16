@@ -1,17 +1,23 @@
 {
   "name": "electron-auto-update-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "main.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/bhoomij/electron-auto-update-example.git"
+    "type": "git",
+    "url": "https://github.com/bhoomij/electron-auto-update-example.git"
   },
   "scripts": {
     "start": "electron .",
+    "start1": "electron --inspect=9229 --remote-debugging-port=9222 .",
     "build": "electron-builder build --mac --win --publish never",
     "deploy": "electron-builder build --mac --win --publish always"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^16.0.7",
+    "electron-builder": "^22.14.5",
+    "electron-updater": "^4.6.1"
+  }
 }
