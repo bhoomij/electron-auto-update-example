@@ -26,9 +26,10 @@ app.on('ready', () => {
 });
 
 app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') {
+  console.log('process.platform: ', process.platform);
+  // if (process.platform !== 'darwin') {
     app.quit();
-  }
+  // }
 });
 
 app.on('activate', function () {
@@ -52,6 +53,6 @@ autoUpdater.on('update-downloaded', () => {
 ipcMain.on('restart_app', () => {
   autoUpdater.quitAndInstall();
   // app.relaunch()
-  app.exit();
-  app.quit()
+  // app.exit();
+  // app.quit()
 });
