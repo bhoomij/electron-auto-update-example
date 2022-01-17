@@ -17,7 +17,9 @@ function createWindow () {
     mainWindow = null;
   });
   mainWindow.once('ready-to-show', () => {
-    autoUpdater.checkForUpdatesAndNotify();
+    if (process.platform !== 'darwin') {
+      autoUpdater.checkForUpdatesAndNotify();
+    }
   });
 }
 
