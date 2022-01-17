@@ -52,6 +52,6 @@ autoUpdater.on('update-downloaded', () => {
 ipcMain.on('restart_app', () => {
   autoUpdater.quitAndInstall();
   // app.relaunch()
-  app.quit()
   app.exit();
+  app.quit()
 });
