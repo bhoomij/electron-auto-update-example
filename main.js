@@ -17,9 +17,10 @@ function createWindow () {
     mainWindow = null;
   });
   mainWindow.once('ready-to-show', () => {
-    if (process.platform !== 'darwin') {
+    // if (process.platform !== 'darwin') {
+      // autoUpdater.setFeedURL('https://dist.unlock.sh/v1/electron/my-app')
       autoUpdater.checkForUpdatesAndNotify();
-    }
+    // }
   });
 }
 
